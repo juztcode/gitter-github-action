@@ -1,0 +1,21 @@
+name: 'Gitter github action'
+description: 'Gitter plugin for github actions'
+inputs:
+  room-id:
+    description: 'Id of the destination room'
+    required: true
+  text:
+    description: 'Text message'
+    required: true
+  token:
+    description: 'User token'
+    required: true
+  message-id:
+    description: 'Message id if need to update existing message'
+    required: false
+outputs:
+  message-id:
+    description: 'Id of sent message'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
