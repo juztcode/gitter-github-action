@@ -1,21 +1,21 @@
-name: 'Gitter github action'
-description: 'Gitter plugin for github actions'
+name: 'Gitter Notify'
+description: 'Github notify - Github plugin'
 inputs:
   room-id:
-    description: 'Id of the destination room'
+    description: 'Gitter room id in which message needs to be sent'
     required: true
   text:
-    description: 'Text message'
+    description: 'Message text that need to be displayed'
     required: true
   token:
-    description: 'User token'
+    description: 'Gitter personal access token'
     required: true
   message-id:
-    description: 'Message id if need to update existing message'
+    description: 'To replace existing message, Provide message id'
     required: false
 outputs:
   message-id:
-    description: 'Id of sent message'
+    description: 'Id of the submitted message'
 runs:
   using: 'node12'
   main: 'dist/index.js'
