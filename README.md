@@ -48,7 +48,7 @@ Input             | Purpose
 ------------------|---------------------------------------------------------------------------------------------------------------------------------------
 room-id           | Specify Gitter room id in which message needs to be sent
 token             | Personal access token of a user who has permission to send messages to above mentioned Gitter room.
-text              | Message need to be displayed (Ref, EventName, ActionUrl are automatically added to the message).
-message-id        | Instead of creating a new message if you want to replace existing then you can provide id. After github action submitted message id can be accessed via action outputs.
+text              | Message text need to be displayed (Ref, EventName and ActionUrl will be automatically added to the message).
+message-id        | Privide message id if you want to replace existing message. Otherwise gitter notify action will return submitted message id and you can access it via step outputs.
 
 >**At the moment Gitter developer api does not provide option to reset personal access token**
